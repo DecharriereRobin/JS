@@ -37,7 +37,11 @@ $('a[href^="#"]').on('click',function(){
 	$('body').animate({scrollTop:offset},3000)
 })
 
-
+$('a[href^="#"]').on('keyup',function(){
+	var attribut = $(this).attr('href')
+	var offset = $(attribut).offset().top
+	$('body').animate({scrollTop:offset},3000)
+})
 
 
 
