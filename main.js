@@ -24,7 +24,7 @@ $('#pseudo').on('keyup',function(){
    de l'attribut correspondant dans une variable
 -3 offset Top pour connaitre la distance dans une variable
    entre l'ancre et la cible
--4 sur le body, on anime avec un scrollTop par rapport 
+-4 sur le body et/ou le html, on anime avec un scrollTop par rapport 
    à cet attribut
 5- on bloque le comportement par défaut
    de l'ancre (return false si ca ne fonctionne pas)
@@ -34,11 +34,8 @@ $('#pseudo').on('keyup',function(){
 $('a[href^="#"]').on('click',function(){
 	var attribut = $(this).attr('href')
 	var offset = $(attribut).offset().top
-	$('body').animate({scrollTop:offset},3000)
+	$('html,body').animate({scrollTop:offset},1500)
 })
-
-
-
 
 	
 }) // Fermeture DOM
